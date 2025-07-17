@@ -1,5 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head><title>準備中</title></head>
-  <body>最初のHTMLファイル</body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>アニメ視聴リスト</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background-color: white;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      position: relative;
+    }
+    .delete-btn {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📺 みんなのアニメ視聴リスト</h1>
+
+  <form id="animeForm">
+    <input type="text" id="title" placeholder="アニメタイトル" required />
+    <input type="text" id="comment" placeholder="一言コメント" />
+    <input type="text" id="name" placeholder="あなたの名前（ニックネーム）" />
+    <button type="submit">追加</button>
+  </form>
+
+  <ul id="animeList"></ul>
+
+  <!-- Firebase連携済みの app.js を読み込む -->
+  <script type="module" src="app.js"></script>
+</body>
 </html>
